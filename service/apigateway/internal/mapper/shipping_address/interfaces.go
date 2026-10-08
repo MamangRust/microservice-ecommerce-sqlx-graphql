@@ -1,0 +1,16 @@
+package shipping_addressgraphqlmapper
+
+import (
+	"github.com/MamangRust/microservice-ecommerce-grpc-apigateway/internal/model"
+	"github.com/MamangRust/microservice-ecommerce-grpc-pb/shipping_address"
+)
+
+type ShippingAddresGraphqlMapper interface {
+	ToGraphResponseShippingAddress(res *pb_shipping_address.ApiResponseShipping) *model.APIResponseShipping
+	ToGraphResponseShippingAddressDeleteAt(res *pb_shipping_address.ApiResponseShippingDeleteAt) *model.APIResponseShippingDeleteAt
+	ToGraphResponsesShippingAddress(res *pb_shipping_address.ApiResponsesShipping) *model.APIResponsesShipping
+	ToGraphResponseShippingAddressDelete(res *pb_shipping_address.ApiResponseShippingDelete) *model.APIResponseShippingDelete
+	ToGraphResponseShippingAddressAll(res *pb_shipping_address.ApiResponseShippingAll) *model.APIResponseShippingAll
+	ToGraphResponsePaginationShippingAddressDeleteAt(res *pb_shipping_address.ApiResponsePaginationShippingDeleteAt) *model.APIResponsePaginationShippingDeleteAt
+	ToGraphResponsePaginationShippingAddress(res *pb_shipping_address.ApiResponsePaginationShipping) *model.APIResponsePaginationShipping
+}

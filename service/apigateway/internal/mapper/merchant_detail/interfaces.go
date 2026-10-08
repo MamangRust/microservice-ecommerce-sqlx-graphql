@@ -1,0 +1,17 @@
+package merchant_detailgraphqlmapper
+
+import (
+	"github.com/MamangRust/microservice-ecommerce-grpc-apigateway/internal/model"
+	"github.com/MamangRust/microservice-ecommerce-grpc-pb/merchant"
+	"github.com/MamangRust/microservice-ecommerce-grpc-pb/merchant_detail"
+)
+
+type MerchantDetailGraphqlMapper interface {
+	ToGraphqlResponseMerchantDetailRelation(res *pb_merchant_detail.ApiResponseMerchantDetail) *model.APIResponseMerchantDetailRelation
+	ToGraphqlResponseMerchantDetailDelete(res *pb_merchant.ApiResponseMerchantDelete) *model.APIResponseMerchantDetailDelete
+	ToGraphqlResponseMerchantDetailAll(res *pb_merchant.ApiResponseMerchantAll) *model.APIResponseMerchantDetailAll
+	ToGraphqlResponseMerchantDetail(res *pb_merchant_detail.ApiResponseMerchantDetail) *model.APIResponseMerchantDetail
+	ToGraphqlResponseMerchantDetailDeleteAt(res *pb_merchant_detail.ApiResponseMerchantDetailDeleteAt) *model.APIResponseMerchantDetailDeleteAt
+	ToGraphqlResponsePaginationMerchantDetail(res *pb_merchant_detail.ApiResponsePaginationMerchantDetail) *model.APIResponsePaginationMerchantDetail
+	ToGraphqlResponsePaginationMerchantDetailDeleteAt(res *pb_merchant_detail.ApiResponsePaginationMerchantDetailDeleteAt) *model.APIResponsePaginationMerchantDetailDeleteAt
+}

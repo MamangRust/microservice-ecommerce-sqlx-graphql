@@ -1,0 +1,17 @@
+package merchant_awardgraphqlmapper
+
+import (
+	"github.com/MamangRust/microservice-ecommerce-grpc-apigateway/internal/model"
+	"github.com/MamangRust/microservice-ecommerce-grpc-pb/merchant"
+	"github.com/MamangRust/microservice-ecommerce-grpc-pb/merchant_award"
+)
+
+type MerchantAwardGraphqlMapper interface {
+	ToGraphqlResponseMerchantAwardDelete(res *pb_merchant.ApiResponseMerchantDelete) *model.APIResponseMerchantAwardDelete
+	ToGraphqlResponseMerchantAwardAll(res *pb_merchant.ApiResponseMerchantAll) *model.APIResponseMerchantAwardAll
+	ToGraphqlResponseMerchantAward(res *pb_merchant_award.ApiResponseMerchantAward) *model.APIResponseMerchantAward
+	ToGraphqlResponseMerchantAwardDeleteAt(res *pb_merchant_award.ApiResponseMerchantAwardDeleteAt) *model.APIResponseMerchantAwardDeleteAt
+	ToGraphqlResponseMerchantAwards(res *pb_merchant_award.ApiResponsesMerchantAward) *model.APIResponsesMerchantAward
+	ToGraphqlResponsePaginationMerchantAwardDeleteAt(res *pb_merchant_award.ApiResponsePaginationMerchantAwardDeleteAt) *model.APIResponsePaginationMerchantAwardDeleteAt
+	ToGraphqlPaginationMerchantAward(res *pb_merchant_award.ApiResponsePaginationMerchantAward) *model.APIResponsePaginationMerchantAward
+}
